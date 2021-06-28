@@ -1,0 +1,33 @@
+.chart_class { height: 200px; width: 250px; float: left; }
+
+caption { padding-bottom: 15px; font-family: 'Verdana'; font-size: 1.2em; color: #555; }
+
+table { font-family: 'Verdana'; font-size: 12pt; border-collapse: collapse; border: 1px solid #EBEBEB; margin: 10px auto; text-align: center; width: 100%; }
+
+table tr:nth-child(odd) { background-color: #fff; }
+
+table tr:nth-child(even) { background-color: #FCF9F9; }
+
+th { font-weight: 600; padding: 10px; }
+
+.ploar_chart { width: 40%; height: 600px; float: left; }
+
+.scatter_div { width: 600px; height: 500px; margin-left: 100px; }
+
+#radar_div { height: 55%; }
+
+#chartdiv2 { margin-left: 40px; }
+
+.select_chart_title { margin-top: 30px; margin-left: 30px; }
+
+.select_chart_content { display: flex; margin-left: 30px; margin-top: 30px; height: 200px; flex-direction: column; }
+
+.select_chart_content .select_chart { display: flex; box-sizing: border-box; margin-left: 40px; }
+
+.select_chart_content .select_chart .chart_select_radio_label { width: 150px; height: 130px; padding-top: 6px; text-align: center; margin-top: 4px; margin-right: 40px; }
+
+.select_chart_content .select_chart .chart_select_radio_label .example_img { width: 150px; height: 100px; }
+
+.select_chart_content .select_chart .chart_select_radio_label:hover { cursor: pointer; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; margin-top: 0px; }
+
+/*# sourceMappingURL=chart.css.map */

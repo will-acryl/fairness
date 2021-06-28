@@ -1,0 +1,152 @@
+/* 단계별 상태 스타일 */
+.step-state {
+	padding:10px 0 15px;	
+  background:#f7f7f7;
+  
+  ul {
+    list-style:none;
+    width: 20%;
+    margin: 0;
+
+    &:after{
+      content:'';
+      display:block;
+      clear:both
+    }
+
+    li{
+      float:left;
+      position:relative;
+      width:33%; /* 5개 진행바를 5등분 */
+      padding-top:50px; /* 진행바 영역 확보 */
+      font-size:15px;
+      font-weight:bold;
+      text-align:center;
+      line-height:12px;
+      color:#666;
+
+      /* 회색 진행바 생성 */
+      &:before{
+        position:absolute;
+        top:35px;
+        left:0;
+        right:0;
+        height:3px;
+        background:#ddd;
+        content:'';
+      }
+
+      /* 화살표 상태 아이콘 */
+      &:after {
+        position:absolute;
+        top:27px;
+        left:50%;
+        width:20px;
+        height:20px;
+        margin-left:-10px;
+        background:url(http://cfile5.uf.tistory.com/image/241D463E58AFAEAB1642F3) no-repeat 0 0;
+        background-size:auto 24px;
+        background-position:0 0;
+        content:'';
+      }
+
+      /* 도전중, 달성 텍스트 영역 */
+      p:after{
+        position:absolute; /* absolute 기준은 li 영역 */
+        width:41px;
+        height:24px;
+        margin-right:-20px;
+        background:url(http://cfile5.uf.tistory.com/image/241D463E58AFAEAB1642F3) no-repeat 0 0;
+        background-size:auto 24px;
+        background-position:-58px 0;
+        top:0;
+        right:0;
+        color:#fff;
+        font-size:11px;
+        line-height:16px;
+        letter-spacing:-.5px;
+      }
+
+      span {
+        display:block;
+        margin-top:2px;
+        font-weight:normal;
+        color:#898989;
+        font-size:12px;
+      }
+    }
+  }
+
+  .nav_btn{
+    background-color: #007bff;
+    position: relative;
+      top: -3.6rem;
+      cursor: pointer;
+      float: right;
+      margin-right: 50px;
+      height: 50px;
+      width: 60px;
+      color: white;
+      border-radius: 12px;
+      border-width:0px;
+  }
+  
+  #next_btn{
+    background-color: #007bff;
+      margin-right: 50px;
+  }
+  #back_btn{
+    background-color: #969696;
+    margin-right: 10px;
+  }
+}
+
+
+
+.step-box {
+	padding:0 10px 10px 10px;
+	border:1px solid #ddd;
+	background:#fff
+}
+
+/* 첫 번째 진행바 반만 생성*/
+.step-state ul li:nth-child(1):before {
+	left:50%
+}
+/* 마지막 진행바 반만 생성*/
+.step-state ul li:nth-child(3):before {
+	right:50%
+}
+
+/* 활성화 진행바 및 활성화 화살표 아이콘 표시 */
+/* 활성화 상태바 */
+.step-state.step1 ul li:nth-child(-n):before,
+.step-state.step2 ul li:nth-child(-n+2):before,
+.step-state.step3 ul li:nth-child(-n+3):before,
+.step-state.step4 ul li:nth-child(-n+4):before,
+.step-state.step5 ul li:nth-child(-n+5):before {
+	background:#ff889b
+}
+/* 활성화 아이콘 표시 */
+.step-state.step1 ul li:nth-child(1):after,
+.step-state.step2 ul li:nth-child(-n+2):after,
+.step-state.step2-ing ul li:nth-child(-n+2):after,
+.step-state.step3 ul li:nth-child(-n+3):after,
+.step-state.step3-ing ul li:nth-child(-n+3):after,
+.step-state.step4 ul li:nth-child(-n+4):after,
+.step-state.step4-ing ul li:nth-child(-n+4):after,
+.step-state.step5 ul li:nth-child(-n+5):after {
+	background-position:-20px 0
+}
+/* 도전 중일 경우의 1/2 영역 비활성화 상태바 영역 */
+.step-state ul li p:before {
+	position:absolute;
+	top:35px;
+	left:50%;
+	right:0;
+	height:3px;
+	content:'';
+}
+.step-state.step2 ul li:nth-child(2) p:before{
+	background:#ddd
+}

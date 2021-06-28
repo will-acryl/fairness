@@ -1,0 +1,227 @@
+#csv-alert { width: 100%; height: 100%; position: fixed; align-items: center; justify-content: center; flex-direction: column; top: 0px; left: 0px; z-index: 5; background-color: rgba(0, 0, 0, 0.6); }
+
+#csv-alert .csv-alert-content { display: flex; flex-direction: column; box-sizing: border-box; padding: 32px; width: 350px; height: 300px; background-color: #ffffff; border-radius: 4px; }
+
+#csv-alert .csv-alert-content .alert-title { margin: 0px; font-size: 28px; font-weight: bold; color: #212121; margin-bottom: 12px; }
+
+#csv-alert .csv-alert-content .data-list-content { display: flex; flex-direction: column; }
+
+#csv-alert .csv-alert-content .data-list-content .title-sel, #csv-alert .csv-alert-content .data-list-content .data-sel { box-sizing: border-box; margin: 5px; width: auto; height: 44px; }
+
+#csv-alert .csv-alert-content .alert-bottom { display: flex; box-sizing: border-box; align-self: flex-end; flex: 1; align-items: flex-end; }
+
+#csv-alert .csv-alert-content .alert-bottom .close-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #ff5362; border-radius: 4px; }
+
+#csv-alert .csv-alert-content .alert-bottom .close-btn .close-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-alert .csv-alert-content .alert-bottom .close-btn:hover { cursor: pointer; background-color: #ff0f0f; }
+
+#csv-alert .csv-alert-content .alert-bottom .ok-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #007bff; border-radius: 4px; margin-right: 12px; }
+
+#csv-alert .csv-alert-content .alert-bottom .ok-btn .ok-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-alert .csv-alert-content .alert-bottom .ok-btn:hover { cursor: pointer; background-color: #006aff; }
+
+#csv-features-alert { width: 100%; height: 100%; position: fixed; align-items: center; justify-content: center; flex-direction: column; top: 0px; left: 0px; z-index: 5; background-color: rgba(0, 0, 0, 0.6); }
+
+#csv-features-alert .csv-features-content { display: flex; flex-direction: column; box-sizing: border-box; padding: 32px; width: 700px; height: 400px; background-color: #ffffff; border-radius: 4px; }
+
+#csv-features-alert .csv-features-content .alert-title { margin: 0px; font-size: 28px; font-weight: bold; color: #212121; margin-bottom: 12px; }
+
+#csv-features-alert .csv-features-content .features-list-content { display: flex; flex-flow: wrap; margin-left: 10px; margin-bottom: 10px; }
+
+#csv-features-alert .csv-features-content .features-list-content .features-item { box-sizing: border-box; padding-bottom: 8px; width: 308px; margin: 0px; }
+
+#csv-features-alert .csv-features-content .features-list-content::-webkit-scrollbar { display: none; }
+
+#csv-features-alert .csv-features-content .alert-bottom { display: flex; box-sizing: border-box; align-self: flex-end; flex: 1; align-items: flex-end; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-close-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #ff5362; border-radius: 4px; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-close-btn .close-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-close-btn:hover { cursor: pointer; background-color: #ff0f0f; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-ok-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #007bff; border-radius: 4px; margin-right: 12px; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-ok-btn .ok-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-features-alert .csv-features-content .alert-bottom .features-ok-btn:hover { cursor: pointer; background-color: #006aff; }
+
+#optim-setting-alert { width: 100%; height: 100%; position: fixed; align-items: center; justify-content: center; flex-direction: column; top: 0px; left: 0px; z-index: 5; background-color: rgba(0, 0, 0, 0.6); }
+
+#optim-setting-alert .optim-setting-content { display: flex; flex-direction: column; box-sizing: border-box; padding: 32px; width: 500px; height: 400px; background-color: #ffffff; border-radius: 4px; }
+
+#optim-setting-alert .optim-setting-content .alert-title { margin: 0px; font-size: 28px; font-weight: bold; color: #212121; margin-bottom: 12px; }
+
+#optim-setting-alert .optim-setting-content .optim-list-content { margin: 15px; }
+
+#optim-setting-alert .optim-setting-content .optim-list-content .feature-attr-item { box-sizing: border-box; width: 330px; height: 30px; margin-left: 5px; }
+
+#optim-setting-alert .optim-setting-content .optim-list-content .feature-value-item, #optim-setting-alert .optim-setting-content .optim-list-content .feature-value-type-item { box-sizing: border-box; margin: 5px; width: 190px; height: 30px; margin-bottom: 20px; }
+
+#optim-setting-alert .optim-setting-content .optim-list-content::-webkit-scrollbar { display: none; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom { display: flex; box-sizing: border-box; align-self: flex-end; flex: 1; align-items: flex-end; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-close-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #ff5362; border-radius: 4px; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-close-btn .close-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-close-btn:hover { cursor: pointer; background-color: #ff0f0f; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-ok-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #007bff; border-radius: 4px; margin-right: 12px; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-ok-btn .ok-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#optim-setting-alert .optim-setting-content .alert-bottom .optim-ok-btn:hover { cursor: pointer; background-color: #006aff; }
+
+#csv-label-alert { width: 100%; height: 100%; position: fixed; align-items: center; justify-content: center; flex-direction: column; top: 0px; left: 0px; z-index: 5; background-color: rgba(0, 0, 0, 0.6); }
+
+#csv-label-alert .csv-label-content { display: flex; flex-direction: column; box-sizing: border-box; padding: 32px; width: 600px; height: 260px; background-color: #ffffff; border-radius: 4px; }
+
+#csv-label-alert .csv-label-content .alert-title { margin: 0px; font-size: 28px; font-weight: bold; color: #212121; margin-bottom: 12px; }
+
+#csv-label-alert .csv-label-content .label-content .label-title-sel, #csv-label-alert .csv-label-content .label-content .label-type-sel, #csv-label-alert .csv-label-content .label-content .label-data-sel { box-sizing: border-box; margin: 5px; width: 160px; height: 44px; }
+
+#csv-label-alert .csv-label-content .alert-bottom { display: flex; box-sizing: border-box; align-self: flex-end; flex: 1; align-items: flex-end; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-close-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #ff5362; border-radius: 4px; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-close-btn .close-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-close-btn:hover { cursor: pointer; background-color: #ff0f0f; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-ok-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #007bff; border-radius: 4px; margin-right: 12px; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-ok-btn .ok-txt { box-sizing: border-box; margin: auto; color: #ffffff; }
+
+#csv-label-alert .csv-label-content .alert-bottom .label-ok-btn:hover { cursor: pointer; background-color: #006aff; }
+
+#description-alert { width: 100%; height: 100%; position: fixed; align-items: center; justify-content: center; flex-direction: column; top: 0px; left: 0px; z-index: 10; background-color: rgba(0, 0, 0, 0.6); }
+
+#description-alert .description-content { box-sizing: border-box; width: 500px; padding: 16px; background-color: #ffffff; border-radius: 4px; }
+
+#description-alert .description-content .description-close-btn { display: flex; box-sizing: border-box; width: 100px; height: 45px; background-color: #007bff; border-radius: 4px; margin-right: 12px; font-size: 16px; color: #ffffff; justify-content: center; padding-top: 10px; margin: 0px; margin-left: auto; }
+
+#description-alert .description-content .description-close-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel { margin-left: 40px; }
+
+.step-panel .load-data-content .select-upload-type { display: flex; box-sizing: border-box; flex-direction: column; margin-left: 20px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select { display: flex; box-sizing: border-box; flex-direction: column; margin-bottom: 5px; margin-top: 10px; width: fit-content; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .csv-upload-radio-item { display: flex; box-sizing: border-box; flex-direction: row; align-items: center; margin-bottom: 5px; margin-top: 10px; height: 20px; width: fit-content; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-radio-txt { font-size: 18px; font-weight: bold; box-sizing: border-box; margin-left: 5px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option { display: flex; box-sizing: border-box; flex-direction: row; width: auto; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option #url-csv-input { margin-left: 30px; width: 250px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option #fileName-csv-input { margin-left: 10px; width: 150px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-upload-btn { display: flex; box-sizing: border-box; height: 25px; width: 95px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 30px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-upload-btn .upload-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-upload-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-send-btn { display: flex; box-sizing: border-box; height: 25px; width: 95px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 10px; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-send-btn .send-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel .load-data-content .select-upload-type .csv-upload-type-select .upload-option .csv-send-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel .title-content { display: flex; flex-direction: row; box-sizing: border-box; }
+
+.step-panel .title-content .title { margin-top: 1rem; margin-bottom: 1rem; margin-right: 12px; }
+
+.step-panel .title-content .uploaded-txt { display: none; box-sizing: border-box; margin-top: 22px; }
+
+.step-panel form { margin-left: 20px; }
+
+.step-panel form .radio_div .data-name-content { display: flex; box-sizing: border-box; flex-direction: row; align-items: center; margin-bottom: 5px; margin-top: 10px; }
+
+.step-panel form .radio_div .data-name-content .radio-dataset:hover { cursor: pointer; }
+
+.step-panel form .radio_div .data-name-content .choice { font-size: 18px; font-weight: bold; box-sizing: border-box; margin-left: 5px; }
+
+.step-panel form .radio_div .data-name-content .choice:hover { cursor: pointer; }
+
+.step-panel form .radio_div .description { display: flex; flex-direction: column; font-size: 14px; font-weight: normal; margin-left: 30px; }
+
+.step-panel form .radio_div .description .protected-attributes-description { display: none; width: 150px; text-decoration: underline; text-decoration-style: dotted; }
+
+.step-panel form .radio_div .description .protected-attributes-description:hover { cursor: help; }
+
+.step-panel form .radio_div .protected-attributes-content { display: flex; box-sizing: border-box; flex-direction: column; margin-left: 30px; }
+
+.step-panel form .radio_div .protected-attributes-content .protected-data-box { display: flex; box-sizing: border-box; flex-direction: row; }
+
+.step-panel form .radio_div .protected-attributes-content .protected-data-box .protected-data-txt { box-sizing: border-box; margin: 0px; }
+
+.step-panel form .radio_div .protected-attributes-content .protected-data-box .protected-data-txt span { font-weight: bold; }
+
+.step-panel form .radio_div .protected-attributes-content .protected-data-box .protected-data-del-btn { display: flex; box-sizing: border-box; height: 20px; width: 20px; justify-content: center; border-radius: 10px; background-color: #ff5362; margin-left: 12px; margin-top: 4px; font-size: 10px; padding-top: 2px; color: #ffffff; }
+
+.step-panel form .radio_div .protected-attributes-content .protected-data-box .protected-data-del-btn:hover { cursor: pointer; background-color: #ff0f0f; }
+
+.step-panel form .radio_div .select-attributes-content { display: none; }
+
+.step-panel form .radio_div .select-attributes-content .select-attributes-btn { display: flex; box-sizing: border-box; height: 25px; width: 200px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 30px; margin-bottom: 20px; margin-top: 10px; }
+
+.step-panel form .radio_div .select-attributes-content .select-attributes-btn .select-attributes-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel form .radio_div .select-attributes-content .select-attributes-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel form .radio_div .select-attributes-content .select-features-btn { display: flex; box-sizing: border-box; height: 25px; width: 150px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 10px; margin-bottom: 20px; margin-top: 10px; }
+
+.step-panel form .radio_div .select-attributes-content .select-features-btn .select-features-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel form .radio_div .select-attributes-content .select-features-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel form .radio_div .select-attributes-content .select-optim-btn { display: flex; box-sizing: border-box; height: 25px; width: 150px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 10px; margin-bottom: 20px; margin-top: 10px; }
+
+.step-panel form .radio_div .select-attributes-content .select-optim-btn .select-optim-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel form .radio_div .select-attributes-content .select-optim-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.step-panel form .radio_div .select-attributes-content .select-label-btn { display: flex; box-sizing: border-box; height: 25px; width: 150px; border-radius: 4px; justify-content: center; background-color: #007bff; margin-left: 10px; margin-bottom: 20px; margin-top: 10px; }
+
+.step-panel form .radio_div .select-attributes-content .select-label-btn .select-label-txt { box-sizing: border-box; margin-top: 3px; font-size: 14px; color: #ffffff; }
+
+.step-panel form .radio_div .select-attributes-content .select-label-btn:hover { cursor: pointer; background-color: #006aff; }
+
+.diagram { resize: both; margin-left: 2.2rem; margin-top: -2rem; width: 280px; }
+
+#content { margin-bottom: 50px; }
+
+#loading { /*background: url('../img/loading_big.gif') no-repeat center center;*/ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+
+#loading #loding_img { z-index: 9999999; width: 150px; height: 150px; top: 50%; left: 50%; position: relative; margin-left: -75px; margin-top: -75px; }
+
+.subtitle { margin-left: 30px; }
+
+.line_hr { width: 80%; margin-left: 30px; margin-top: -10px; }
+
+.chart_title { margin-top: 30px; }
+
+#scatter_container1 { float: left; }
+
+.scatter_text { margin-left: 40px; }
+
+.container { width: 90%; height: 220px; margin-left: 20px; }
+
+.container .chart_class { margin-left: 40px; }
+
+.subtitle_title, .subtitle_val { float: left; }
+
+.subtitle_val { margin-left: 8px; font-weight: bold; }
+
+.explain_div { margin-left: 40px; margin-bottom: 20px; }
+
+.to_text { margin-left: 8px; }
+
+/*# sourceMappingURL=content.css.map */

@@ -1,0 +1,108 @@
+<meta charset="utf-8" />
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+{% extends 'base.html' %} {% block content %}
+<div id="loading_div">
+    <div id="loading">
+        <img id="loding_img" src="../static/img/loading_big.gif" />
+    </div>
+    <div
+        style="
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            opacity: 0.5;
+            background-color: rgb(0, 0, 0);
+        "
+    ></div>
+</div>
+<div id="chart_content" class="step-panel" hidden="true">
+    <h2 class="title">2. Check bias metrics</h2>
+    <div class="subtitle">
+        <div>
+            Dataset: {{select_val}}
+        </div>
+        <div>
+            Mitigation: none
+        </div>
+        <h3 class="chart_title">Data distribution</h3>
+    </div>
+    <div id="scatter_chart">
+        <hr class="line_hr" />
+        <div id="scatter_container1" class="scatter_div"></div>
+        <div id="scatter_container2" class="scatter_div"></div>
+    </div>
+    <div class="subtitle">
+        <h3 class="chart_title">Protected Attribute: Sex</h3>
+    </div>
+    <div id="bar_chart">
+        <hr class="line_hr" />
+        <div class="container">
+            <div id="chart_1" class="chart_class">
+                <canvas id="canvas_1"></canvas>
+            </div>
+            <div id="chart_2" class="chart_class">
+                <canvas id="canvas_2"></canvas>
+            </div>
+            <div id="chart_3" class="chart_class">
+                <canvas id="canvas_3"></canvas>
+            </div>
+            <div id="chart_4" class="chart_class">
+                <canvas id="canvas_4"></canvas>
+            </div>
+            <div id="chart_5" class="chart_class">
+                <canvas id="canvas_5"></canvas>
+            </div>
+        </div>
+
+        <div class="subtitle">
+            <h3 class="chart_title">Protected Attribute: Race</h3>
+        </div>
+        <hr class="line_hr" />
+        <div class="container">
+            <div id="chart_6" class="chart_class">
+                <canvas id="canvas_6"></canvas>
+            </div>
+            <div id="chart_7" class="chart_class">
+                <canvas id="canvas_7"></canvas>
+            </div>
+            <div id="chart_8" class="chart_class">
+                <canvas id="canvas_8"></canvas>
+            </div>
+            <div id="chart_9" class="chart_class">
+                <canvas id="canvas_9"></canvas>
+            </div>
+            <div id="chart_10" class="chart_class">
+                <canvas id="canvas_10"></canvas>
+            </div>
+        </div>
+    </div>
+    <form id="form_tag" method="post" action="/mitigate">
+        <input
+            type="hidden"
+            id="before_chart_data_sex"
+            name="before_chart_data_sex"
+            value=""
+        />
+        <input
+            type="hidden"
+            id="before_chart_data_race"
+            name="before_chart_data_race"
+            value=""
+        />
+        <input
+            type="hidden"
+            id="select_val"
+            name="select_val"
+            value="{{select_val}}"
+        />
+    </form>
+</div>
+{% endblock %}

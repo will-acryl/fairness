@@ -1,0 +1,223 @@
+{% extends 'base.html' %} {% block content %}
+<div id="csv-alert" style='display: none;'>
+    <div class="csv-alert-content">
+        <h2 class="alert-title">Select protection</h2>
+        <div class="data-list-content">
+            <select class="title-sel"></select>
+            <select class="data-sel"></select>
+        </div>
+        <div class=" alert-bottom">
+            <div class="ok-btn">
+                <p class="ok-txt">OK</p>
+            </div>
+            <div class="close-btn">
+                <p class="close-txt">CLOSE</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="csv-features-alert" style="display: none;">
+    <div class="csv-features-content">
+        <h2 class="alert-title">Select features</h2>
+        <div class="features-list-content" style="overflow-y: scroll;"></div>
+        <div class="alert-bottom">
+            <div class="features-ok-btn">
+                <p class="ok-txt">OK</p>
+            </div>
+            <div class="features-close-btn">
+                <p class="close-txt">CLOSE</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="optim-setting-alert" style="display: none;">
+    <div class="optim-setting-content">
+        <h2 class="alert-title">Select features value</h2>
+        <div class="optim-list-content" style="overflow-y: scroll;"></div>
+        <div class="alert-bottom">
+            <div class="optim-ok-btn">
+                <p class="ok-txt">OK</p>
+            </div>
+            <div class="optim-close-btn">
+                <p class="close-txt">CLOSE</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="csv-label-alert" style="display: none;">
+    <div class="csv-label-content">
+        <h2 class="alert-title">Select label</h2>
+        <div class="label-content">
+            <select class="label-title-sel"></select>
+            <select class="label-type-sel"></select>
+            <select class="label-data-sel"></select>
+        </div>
+        <div class="alert-bottom">
+            <div class="label-ok-btn">
+                <p class="ok-txt">OK</p>
+            </div>
+            <div class="label-close-btn">
+                <p class="close-txt">CLOSE</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="description-alert" style="display: none;">
+    <div class="description-content">
+        <p>
+            An attribute that partitions a population
+            into groups whose outcomes should have parity.
+            Examples include race, gender, caste, and religion.
+            Protected attributes are not universal, but are application specific.
+        </p>
+        <div class="description-close-btn">Close</div>
+    </div>
+</div>
+
+<div id="loading_div" style="display: none;">
+    <div id="loading">
+        <img id="loding_img" src="../static/img/loading_big.gif" />
+    </div>
+    <div style="
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            opacity: 0.5;
+            background-color: rgb(0, 0, 0);
+        "></div>
+</div>
+
+<div class="step-panel">
+    <div class="title-content">
+        <h2 class="title">1. Choose upload data set</h2>
+        <p class="uploaded-txt">(uploaded)</p>
+    </div>
+
+    <div class="load-data-content">
+        <div class="select-upload-type">
+            <div class="csv-upload-type-select">
+                <label class="csv-upload-radio-item">
+                    <input type="radio" class="upload-type" name="upload-type-select-radio" id="csvUpload"
+                        value="csvUpload">
+                    <p class="upload-radio-txt">CSV upload</p>
+                </label>
+                <div class="upload-option">
+                    <label class='csv-upload-btn' htmlFor='csv-input'>
+                        <input id='csv-input' type='file' ontext='loadFile(this)' hidden />
+                        <p class='upload-txt'>find</p>
+                    </label>
+                    <div class="csv-send-btn">
+                        <p class="send-txt">upload</p>
+                    </div>
+                </div>
+            </div>
+            <div class="csv-upload-type-select">
+                <label class="csv-upload-radio-item">
+                    <input type="radio" class="upload-type" name="upload-type-select-radio" id="urlUpload"
+                        value="urlUpload">
+                    <p class="upload-radio-txt">URL upload</p>
+                </label>
+                <div class="upload-option" style="display: none;">
+                    <input id="url-csv-input" type="url" placeholder="input csv url" />
+                    <input id="fileName-csv-input" type="text" placeholder="input csv file name" />
+                    <label class="csv-upload-btn upload-url" htmlFor="url-csv-input">
+                        <p class="upload-txt">upload</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="title-content">
+        <h2 class="title">2. Choose sample data set</h2>
+    </div>
+    <form id="form_tag" method="post" action="/mitigate">
+        <div class="radio_div">
+            <div class="data-name-content">
+                <input type="radio" class="radio-dataset" name="radio-group" id="compas" checked />
+                <span class="choice" for="compas"> Compas (ProPublica recidivism)</span>
+            </div>
+            <div class="description">
+                Predict a criminal defendant’s likelihood of reoffending.
+                <span class="protected-attributes-description" style="display: flex;">Protected Attributes:</span>
+            </div>
+            <div class="protected-attributes-content"></div>
+
+            <div class="select-attributes-content" style="display: flex;">
+                <div class="select-attributes-btn" style="display: flex;">
+                    <p class="select-attributes-txt">Adding Protected Attributes</p>
+                </div>
+                <div class="select-features-btn" style="display: flex;">
+                    <p class="select-features-txt">Adding features</p>
+                </div>
+                <div class="select-optim-btn" style="display: flex;">
+                    <p class="select-optim-txt">Adding features value</p>
+                </div>
+                <div class="select-label-btn" style="display: flex;">
+                    <p class="select-label-txt">Adding label</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="radio_div">
+            <div class="data-name-content">
+                <input type="radio" class="radio-dataset" name="radio-group" id="german" />
+                <span class="choice"> German credit scoring</span>
+            </div>
+            <div class="description">Predict an individual's credit risk.
+                <span class="protected-attributes-description">Protected Attributes:</span>
+            </div>
+            <div class="protected-attributes-content"></div>
+            <div class="select-attributes-content">
+                <div class=" select-attributes-btn">
+                    <p class="select-attributes-txt">Adding Protected Attributes</p>
+                </div>
+                <div class="select-features-btn">
+                    <p class=" select-features-txt">Adding features</p>
+                </div>
+                <div class="select-optim-btn">
+                    <p class="select-optim-txt">Adding features value</p>
+                </div>
+                <div class="select-label-btn">
+                    <p class="select-label-txt">Adding label</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="radio_div">
+            <div class="data-name-content">
+                <input type="radio" class="radio-dataset" name="radio-group" id="adult" />
+                <span class="choice"> Adult census income</span>
+            </div>
+            <div class="description">
+                Predict whether income exceeds $50K/yr based on census data.
+                <span class="protected-attributes-description">Protected Attributes:</span>
+            </div>
+            <div class="protected-attributes-content"></div>
+            <div class="select-attributes-content">
+                <div class=" select-attributes-btn">
+                    <p class="select-attributes-txt">Adding Protected Attributes</p>
+                </div>
+                <div class="select-features-btn">
+                    <p class=" select-features-txt">Adding features</p>
+                </div>
+                <div class="select-optim-btn">
+                    <p class="select-optim-txt">Adding features value</p>
+                </div>
+                <div class="select-label-btn">
+                    <p class="select-label-txt">Adding label</p>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" id="select_val" name="select_val" value="" />
+    </form>
+</div>
+{% endblock %}

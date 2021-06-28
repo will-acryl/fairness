@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="step-panel">
+  <h2 class="title">3. Choose bias mitigation algorithm</h2>
+  <p>A variety of algorithms can be used to mitigate bias. The choice of which to use depends on whether you want to fix
+    the data (pre-process), the classifier (in-process), or the predictions (post-process).</p>
+  <!-- **** Reweighing **** -->
+  <div>
+    <input type="radio" name="radio-group" id="Reweighing" checked><span class="choice"> Reweighing</span>
+  </div>
+  <p class="description">Weights the examples in each (group, label) combination differently to ensure fairness before
+    classification.</p>
+  <br>
+  <div class="diagram">
+    <div class="diagramElement">
+      <object type="image/svg+xml" data="/static/svg/Preprocess.svg" class="diagramElementBackgroundNolight">
+
+      </object>
+    </div>
+  </div>
+  <hr style="width: 95%; border-width: 1px;">
+  <!-- **** Optimized pre-processing **** -->
+  <div>
+    <input type="radio" name="radio-group" id="Optimized pre-processing"><span class="choice"> Optimized
+      Pre-Processing</span>
+  </div>
+  <p class="description">Learns a probabilistic transformation that can modify the features and the labels in the
+    training data.</p>
+  <br>
+  <div class="diagram">
+    <div class="diagramElement">
+      <object type="image/svg+xml" data="/static/svg/Preprocess.svg" class="diagramElementBackgroundNolight">
+
+      </object>
+    </div>
+  </div>
+  <hr style="width: 95%; border-width: 1px;">
+  <!-- **** TBD in-processing **** -->
+  <div>
+    <input type="radio" name="radio-group" id="Adversarial Debiasing"><span class="choice">Adversarial Debiasing</span>
+  </div>
+  <p class="description">Learns a classifier that maximizes prediction accuracy and simultaneously reduces an
+    adversary's ability to determine the protected attribute from the predictions. This approach leads to a fair
+    classifier as the predictions cannot carry any group discrimination information that the adversary can exploit.</p>
+  <br>
+  <div>
+    <div class="diagram">
+      <div class="diagramElement">
+        <object type="image/svg+xml" data="/static/svg/Inprocess.svg" class="diagramElementBackgroundNolight">
+
+        </object>
+      </div>
+    </div>
+  </div>
+  <hr style="width: 95%; border-width: 1px;">
+  <!-- **** Reject Option Based Classification **** -->
+  <div>
+    <input type="radio" name="radio-group" id="Reject Option Based Classification"><span class="choice">Reject Option
+      Based Classification</span>
+  </div>
+  <p class="description">Changes predictions from a classifier to make them fairer. Provides favorable outcomes to
+    unprivileged groups and unfavorable outcomes to privileged groups in a confidence band around the decision boundary
+    with the highest uncertainty.
+  </p>
+  <br>
+  <div>
+    <div class="diagram">
+      <div class="diagramElement">
+        <object type="image/svg+xml" data="/static/svg/Postprocess.svg" class="diagramElementBackgroundNolight">
+
+        </object>
+      </div>
+    </div>
+  </div>
+  <form id='form_tag' method="post" action="/compare">
+    <input type="hidden" id='select_val2' name="select_val2" value=''>
+    <input type="hidden" name="select_val" value={{select_val}}>
+  </form>
+</div>
+{% endblock %}
